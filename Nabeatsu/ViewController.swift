@@ -24,19 +24,15 @@ class ViewController: UIViewController {
         if number % 3 == 0{
             return true
         }
-        
-        if number % 2 == 1{
-             faceLabel.text = "∪･ω･∪"
-        }
         // 問題4: 3がつくかどうか調べる
         
         var check: Int = number
         
         while check != 0 {
-            if check / 10 % 10 == 3{
+            if check % 10 == 3{
                 
                 return true
-    
+                
             } else {
                 
                 check = check / 10
@@ -56,9 +52,13 @@ class ViewController: UIViewController {
             
             faceLabel.text = "ﾍ(ﾟ∀ﾟﾍ)ｱﾋｬ"
         } else {
-            
             faceLabel.text = "(゜o゜)"
         }
+        
+        if number % 2 == 0{
+            faceLabel.text = "∪･ω･∪"
+        }
+        
     }
     
     @IBAction func clear(){
